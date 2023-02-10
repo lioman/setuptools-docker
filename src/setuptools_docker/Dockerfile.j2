@@ -1,4 +1,4 @@
-FROM python:3.8-bullseye AS builder
+FROM {{ base_image }} AS builder
 
 {% for package in builder_extra_os_packages %}
 {% if loop.first %}
